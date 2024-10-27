@@ -1,7 +1,7 @@
-# Collaborative NFT Art Creation Platform
+# MetaMuse
 
 ## Overview
-The **Collaborative NFT Art Creation Platform** is a decentralized application that allows artists to collaboratively create digital artwork in real-time, mint it as a non-fungible token (NFT) on Lisk, and distribute fractional ownership using Arbitrum. This platform ensures transparent royalty distribution and shared ownership, empowering artists to collaborate creatively and securely.
+The **MetaMuse** is a decentralized application that allows artists to collaboratively create digital artwork in real-time, mint it as a non-fungible token (NFT) on Lisk, and distribute fractional ownership using Arbitrum. This platform ensures transparent royalty distribution and shared ownership, empowering artists to collaborate creatively and securely.
 
 ## Table of Contents
 - [Overview](#overview)
@@ -21,9 +21,7 @@ The **Collaborative NFT Art Creation Platform** is a decentralized application t
 ## Tech Stack
 - **Blockchain**: Lisk, Arbitrum
 - **Smart Contracts**: Solidity, Forge
-- **Frontend**: React.js with Canvas API (or Fabric.js)
 - **Backend**: Lisk SDK, IPFS (Pinata or Infura)
-- **Real-time Collaboration**: WebSockets (e.g., Socket.io)
 
 ## Getting Started
 
@@ -37,47 +35,42 @@ Make sure you have the following installed:
 
 ### Installation
 1. Clone the repository:
-   ```bash
+   ```
    git clone https://github.com/yourusername/collaborative-nft-art-platform.git
    cd collaborative-nft-art-platform
    ```
 Install dependencies:
 ```
-bash
-Copy code
 npm install
 ```
 Set up IPFS:
 
 Use Pinata or Infura for IPFS API keys to store artwork and metadata.
-**Running the Application**
+### Running the Application
 Start the local development server:
 
 ```
-bash
-Copy code
 npm start
 ```
-Launch Lisk and Arbitrum nodes:
+**Launch Lisk and Arbitrum nodes:**
 
 Follow setup instructions for Lisk SDK and Arbitrum.
 Deploy the Arbitrum smart contracts with Forge:
 
 Ensure Forge is installed and set up by following the Foundry book.
-Deploy contracts from the contracts folder:
-bash
-Copy code
+
+**Deploy contracts from the contracts folder:**
 ```
 forge create --rpc-url <ARBITRUM_RPC_URL> --private-key <YOUR_PRIVATE_KEY> src/YourContract.sol:YourContract
 ```
-Smart Contract Development
+### Smart Contract Development
 Smart contracts in this project handle:
 
 Fractional Ownership: Distributing shares among contributors.
 Royalty Distribution: Automatically redistributing royalties to collaborators on resale.
 Smart contracts are located in the contracts/ directory. Forge scripts for testing and deployment can be added in script/.
 
-Project Structure
+### Project Structure
 ```
 bash
 Copy code
@@ -90,15 +83,7 @@ collaborative-nft-art-platform/
 ├── README.md
 └── package.json
 ```
-License
+### License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-```
-yaml
-Copy code
-
----
-
-This README should help you and others set up and understand the project, especially with Forge as the contract management tool. You can expand the **Smart Contract Development** section as you implement specific features in your contracts. Let me know if you need further customization for any sections!
-```
 
