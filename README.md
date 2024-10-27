@@ -75,11 +75,11 @@ Smart contracts are located in the contracts/ directory. Forge scripts for testi
 bash
 Copy code
 collaborative-nft-art-platform/
-├── contracts/             # Solidity contracts for Arbitrum
-├── src/                   # Frontend code for React
-│   ├── components/        # React components (Canvas, NFT Minting, etc.)
-│   └── services/          # Web3.js and WebSocket services
-├── script/                # Forge deployment and test scripts
+├── contracts/             
+├── src/                   
+│   ├── components/        
+│   └── services/          
+├── script/                
 ├── README.md
 └── package.json
 ```
