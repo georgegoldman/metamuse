@@ -8,6 +8,7 @@ The **MetaMuse** is a decentralized application that allows artists to collabora
 - [Features](#features)
 - [Tech Stack](#tech-stack)
 - [Getting Started](#getting-started)
+- [Setup and Installation](#setup-and-installation)
 - [Smart Contract Development](#smart-contract-development)
 - [Project Structure](#project-structure)
 - [License](#license)
@@ -32,6 +33,31 @@ Make sure you have the following installed:
 - [Arbitrum Development Environment](https://developer.offchainlabs.com/)
 - [IPFS CLI](https://docs.ipfs.io/install/)
 - [Foundry & Forge](https://book.getfoundry.sh/)
+
+
+### Key Features
+
+- **Contributor Shares Assignment**: The owner can assign shares to multiple contributors.
+- **NFT Purchase**: The contract allows anyone to buy the NFT by paying to the contract.
+- **Automatic Payment Distribution**: Upon purchase, the payment is distributed to all contributors based on their shares.
+- **Events**: Emits events for tracking NFT purchases and payments made to contributors.
+
+### Events
+
+- `NFTPurchased(address indexed buyer, uint256 totalPaid, uint256 tokenId)`: Emitted when an NFT is purchased.
+- `SharesAssigned(address indexed contributor, uint256 shares)`: Emitted when shares are assigned to a contributor.
+- `PaymentDistributed(address indexed contributor, uint256 amount)`: Emitted when payments are distributed to contributors.
+
+### Functions
+
+- `assignShares(address[] memory _contributors, uint256[] memory _shares)`: Allows the owner to assign shares to contributors.
+- `buyNFT(uint256 tokenId)`: Allows users to buy the NFT and triggers payment distribution to contributors.
+
+## Setup and Installation
+ **Clone the Repository**:
+   ```bash
+   git clone git@github.com:georgegoldman/metamuse.git
+   cd metamuse
 
 ### Installation
 1. Clone the repository:
