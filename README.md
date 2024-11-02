@@ -10,6 +10,7 @@ The **MetaMuse** is a decentralized application that allows artists to collabora
 - [Getting Started](#getting-started)
 - [Setup and Installation](#setup-and-installation)
 - [Usage](#usage)
+- [Testing](#testing)
 - [Smart Contract Development](#smart-contract-development)
 - [Project Structure](#project-structure)
 - [License](#license)
@@ -98,7 +99,31 @@ forge create --rpc-url https://rpc.sepolia-api.lisk.com --etherscan-api-key <eth
 forge create CollaborativeNFTOwnership --contracts ./src/FractionalNFT.t.sol --private-key <private> --rpc-url https://sepolia-rollup-sequencer.arbitrum.io/rpc
 ```
 
-Set up IPFS:
+5. **Interacting with the Contract:**
+- Assign Shares: Use the assignShares function to add contributors and their ownership shares.
+- Buy NFT: Call buyNFT with the NFT’s token ID to simulate a purchase and trigger the payment distribution.
+
+## Example
+Here’s an example of how you might call the functions in a test or a deployment script:
+```
+CollaborativeNFTOwnership contractInstance = CollaborativeNFTOwnership(<deployed_address>);
+contractInstance.assignShares([address1, address2], [50, 50]);
+contractInstance.buyNFT(tokenId, {value: amount});
+```
+
+## Testing
+To run tests with Foundry:
+1. Write Tests: Tests are located in the ```test/``` folder. You can add tests as ```.sol``` files.
+2. Run Tests:
+```
+forge test
+```
+3. View Coverage: For checking test coverage:
+```
+forge coverage
+```
+
+-Set up IPFS:
 
 Use Pinata or Infura for IPFS API keys to store artwork and metadata.
 ### Running the Application
