@@ -8,10 +8,10 @@ The **MetaMuse** is a decentralized application that allows artists to collabora
 - [Features](#features)
 - [Tech Stack](#tech-stack)
 - [Getting Started](#getting-started)
+- [Smart Contract Fractional Ownership overview](#smart-contract-development)
 - [Setup and Installation](#setup-and-installation)
 - [Usage](#usage)
 - [Testing](#testing)
-- [Smart Contract Development](#smart-contract-development)
 - [Project Structure](#project-structure)
 - [License](#license)
 
@@ -27,6 +27,13 @@ The **MetaMuse** is a decentralized application that allows artists to collabora
 - **Backend**: Lisk SDK, IPFS (Pinata or Infura)
 
 ## Getting Started
+
+## Smart Contract Fractional Ownership overview
+Smart contracts in this project handle:
+
+Fractional Ownership: Distributing shares among contributors.
+Royalty Distribution: Automatically redistributing royalties to collaborators on resale.
+Smart contracts are located in the contracts/ directory. Forge scripts for testing and deployment can be added in script/.
 
 ### Prerequisites
 Make sure you have the following installed:
@@ -143,12 +150,6 @@ Ensure Forge is installed and set up by following the Foundry book.
 ```
 forge create --rpc-url <ARBITRUM_RPC_URL> --private-key <YOUR_PRIVATE_KEY> src/YourContract.sol:YourContract
 ```
-### Smart Contract Development
-Smart contracts in this project handle:
-
-Fractional Ownership: Distributing shares among contributors.
-Royalty Distribution: Automatically redistributing royalties to collaborators on resale.
-Smart contracts are located in the contracts/ directory. Forge scripts for testing and deployment can be added in script/.
 
 ### Project Structure
 ```
