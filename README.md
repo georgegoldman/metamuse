@@ -9,6 +9,7 @@ The **MetaMuse** is a decentralized application that allows artists to collabora
 - [Tech Stack](#tech-stack)
 - [Getting Started](#getting-started)
 - [Setup and Installation](#setup-and-installation)
+- [Usage](#usage)
 - [Smart Contract Development](#smart-contract-development)
 - [Project Structure](#project-structure)
 - [License](#license)
@@ -60,15 +61,43 @@ Make sure you have the following installed:
    cd metamuse
 
 ### Installation
-1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/collaborative-nft-art-platform.git
-   cd collaborative-nft-art-platform
-   ```
+**Install Foundry: If you haven’t installed Foundry, you can do so with the following commands:**
+```
+curl -L https://foundry.paradigm.xyz | bash
+foundryup
+```
+
+**Install Dependencies: Run the following command to install dependencies (if any):**
+```
+forge install
+```
+
+
 Install dependencies:
 ```
 npm install
 ```
+
+## Usage
+
+1. **Compile the Contract:**
+```
+forge build
+```
+2. **Deploy the Contract: To deploy the contract locally using Foundry:**
+```
+forge create metamuse --private-key <YOUR_PRIVATE_KEY>
+```
+3. **Deploy on Lisk testnet for the NFT minting and NFT ownership**
+```
+forge create --rpc-url https://rpc.sepolia-api.lisk.com --etherscan-api-key <etherscan-api-key> --verify --verifier blockscout --verifier-url https://sepolia-blockscout.lisk.com/api --private-key <private-key> src/NFT.sol:SecureNFTMinter --constructor-args "Lisk" "LSK" "https://baseuri.com/"
+```
+4. **Deploy on Arbitrum testnet for the Fractional ownership part**
+```
+forge create CollaborativeNFTOwnership --contracts ./src/FractionalNFT.t.sol --private-key <private> --rpc-url https://sepolia-rollup-sequencer.arbitrum.io/rpc
+```
+
 Set up IPFS:
 
 Use Pinata or Infura for IPFS API keys to store artwork and metadata.
