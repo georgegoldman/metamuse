@@ -152,16 +152,19 @@ Smart contracts are located in the contracts/ directory. Forge scripts for testi
 
 ### Project Structure
 ```
-bash
-Copy code
-collaborative-nft-art-platform/
-├── contracts/             
-├── src/                   
-│   ├── components/        
-│   └── services/          
-├── script/                
+.
+├── foundry.toml
 ├── README.md
-└── package.json
+├── script
+├── src
+│   ├── FractionalNFT.sol
+│   └── NFT.sol
+└── test
+    ├── FractionalNFT.t.sol
+    └── NFT.t.sol
+
+4 directories, 6 files
+
 ```
 ### License
 This project is licensed under the MIT License - see the LICENSE file for details.
